@@ -10,6 +10,11 @@ app.use(fileupload({
     tempFileDir : '/tmp/'
 }));
 
+app.use(cors({
+    credentials : true,
+    origin:true
+}));
+
 const cloudinary = require("./config/cloudinary");
 cloudinary.cloudinaryConnect();
 
